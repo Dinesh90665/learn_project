@@ -46,12 +46,13 @@
 </head>
 <body>
   <div class="form-box">
-    <h2>Register of Learn</h2>
+    <h2>Register for Dmeal</h2>
     <form method="POST">
-        {%csrf_token %}
-        {{form.as_p}}
-        <button type='submit'>Register</button>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Register</button>
     </form>
-    {% comment %} <p> Already have account <a ="{% url 'login'%}">Login </a> {% endcomment %}
+    <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+  </div>
 </body>
 </html>
